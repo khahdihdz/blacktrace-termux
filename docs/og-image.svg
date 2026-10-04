@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#02060c"/><stop offset=".55" stop-color="#071a2c"/><stop offset="1" stop-color="#02070d"/></linearGradient>
+<filter id="glow"><feGaussianBlur stdDeviation="10" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1600" height="1000" fill="url(#bg)"/>
+<g opacity=".25" stroke="#18bfff"><path d="M0 150H1600M0 300H1600M0 450H1600M0 600H1600M0 750H1600M0 900H1600"/><path d="M150 0V1000M350 0V1000M550 0V1000M750 0V1000M950 0V1000M1150 0V1000M1350 0V1000"/></g>
+<circle cx="1150" cy="300" r="330" fill="#006da8" opacity=".16" filter="url(#glow)"/>
+<text x="90" y="180" fill="#fff" font-family="Arial,sans-serif" font-weight="900" font-size="88" letter-spacing="8">BLACKTRACE</text>
+<text x="95" y="235" fill="#18bfff" font-family="Arial,sans-serif" font-size="30" letter-spacing="9">CYBER OSINT CTF · TERMUX</text>
+<text x="95" y="330" fill="#dcefff" font-family="Arial,sans-serif" font-size="46" font-weight="700">Lần theo dấu vết.</text>
+<text x="95" y="390" fill="#18bfff" font-family="Arial,sans-serif" font-size="46" font-weight="700">Khám phá sự thật.</text>
+<rect x="95" y="445" width="580" height="190" rx="18" fill="#02070ccc" stroke="#17618a" stroke-width="3"/>
+<text x="125" y="490" fill="#18bfff" font-family="monospace" font-size="22">BLACKTRACE v1.1</text>
+<text x="125" y="530" fill="#8de4ff" font-family="monospace" font-size="19">1. Nhiệm vụ / Missions</text>
+<text x="125" y="562" fill="#8de4ff" font-family="monospace" font-size="19">2. Học viện / Academy</text>
+<text x="125" y="594" fill="#8de4ff" font-family="monospace" font-size="19">3. Điều tra / Investigation</text>
+<text x="125" y="626" fill="#8de4ff" font-family="monospace" font-size="19">4. Công cụ / Tools</text>
+<g transform="translate(1010 120)">
+<path d="M0 80 Q190 -40 380 80 L340 610 Q190 760 40 610Z" fill="#03080d" stroke="#18bfff" stroke-width="4"/>
+<rect x="55" y="135" width="270" height="400" rx="18" fill="#02060a" stroke="#17618a" stroke-width="3"/>
+<text x="82" y="190" fill="#18bfff" font-family="monospace" font-size="25">BLACKTRACE</text>
+<text x="82" y="235" fill="#8de4ff" font-family="monospace" font-size="15">OSINT ACADEMY</text>
+<text x="82" y="290" fill="#8de4ff" font-family="monospace" font-size="14">01 Username</text>
+<text x="82" y="320" fill="#8de4ff" font-family="monospace" font-size="14">02 Domain &amp; DNS</text>
+<text x="82" y="350" fill="#8de4ff" font-family="monospace" font-size="14">03 IP Investigation</text>
+<text x="82" y="380" fill="#8de4ff" font-family="monospace" font-size="14">04 Metadata</text>
+<text x="82" y="410" fill="#8de4ff" font-family="monospace" font-size="14">05 Logs &amp; Timeline</text>
+<text x="82" y="470" fill="#18bfff" font-family="monospace" font-size="14">&gt; Nhập lựa chọn: _</text>
+</g>
+<text x="95" y="790" fill="#91a8bb" font-family="Arial,sans-serif" font-size="24">Academy · Missions · Simulated Tools · XP &amp; Rank · Achievements · VI / EN</text>
+<text x="95" y="850" fill="#18bfff" font-family="monospace" font-size="20">OPEN SOURCE · MIT LICENSE · © 2026 khahdihdz</text>
+</svg>
