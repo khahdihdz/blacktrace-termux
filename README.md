@@ -69,4 +69,9 @@ BLACKTRACE là **game mô phỏng**. Username, domain, IP, log, metadata và cá
 Mỗi push và pull request tự động kiểm tra JSON, localization Việt/English, compile Python và test.
 
 ## 📄 License
-MIT © 2026 khahdihdz
+
+BLACKTRACE được phát hành theo **MIT License**.
+
+Copyright © 2026 khahdihdz
+
+Xem toàn văn tại file `LICENSE` trong repository.
