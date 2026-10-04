@@ -75,3 +75,15 @@ BLACKTRACE được phát hành theo **MIT License**.
 Copyright © 2026 khahdihdz
 
 Xem toàn văn tại file `LICENSE` trong repository.
+
+## 🌐 Landing Page
+
+Landing page giới thiệu BLACKTRACE nằm trong thư mục `docs/` và được triển khai tự động bằng GitHub Actions khi có commit vào `main`.
+
+- Hero giới thiệu game
+- Tính năng, Academy và Missions
+- Hướng dẫn cài đặt Termux
+- Song ngữ Việt / English
+- Open Graph image và responsive mobile
+
+Source: https://github.com/khahdihdz/blacktrace-termux
