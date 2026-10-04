@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#050b14">
+<title>BLACKTRACE — Cyber OSINT CTF for Termux</title>
+<meta name="description" content="BLACKTRACE là game Cyber OSINT CTF chạy trực tiếp trên Termux, song ngữ Việt/English, dành cho người mới học OSINT.">
+<meta property="og:title" content="BLACKTRACE — Cyber OSINT CTF">
+<meta property="og:description" content="Lần theo dấu vết. Khám phá sự thật. OSINT CTF mô phỏng cho Termux.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="./og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="#">BLACK<span>TRACE</span></a>
+  <nav><a href="#features">Tính năng</a><a href="#academy">Academy</a><a href="#missions">Missions</a><a href="#install">Cài đặt</a><a href="https://github.com/khahdihdz/blacktrace-termux">GitHub</a></nav>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow">CYBER OSINT CTF · TERMUX · VI / EN</p>
+    <h1>Lần theo dấu vết.<br><span>Khám phá sự thật.</span></h1>
+    <p class="lead">BLACKTRACE là game OSINT CTF mô phỏng dành cho Termux. Học từ cơ bản, phân tích username, domain, IP, metadata và logs rồi giải mã từng case để tìm FLAG.</p>
+    <div class="actions">
+      <a class="btn primary" href="https://github.com/khahdihdz/blacktrace-termux">Tải trên GitHub</a>
+      <a class="btn" href="#install">Xem hướng dẫn</a>
+    </div>
+    <div class="badges"><span>Không cần root</span><span>Dữ liệu mô phỏng</span><span>Song ngữ</span><span>MIT License</span></div>
+  </div>
+  <div class="hero-art">
+    <img src="./og-image.jpg" alt="BLACKTRACE Cyber OSINT CTF — Termux">
+  </div>
+</section>
+
+<section id="features" class="section">
+  <p class="eyebrow">WHY BLACKTRACE</p><h2>Học OSINT bằng cách chơi</h2>
+  <div class="grid">
+    <article><b>🎓 Academy</b><p>Bài học OSINT từ nhập môn đến username, DNS, IP, metadata và timeline.</p></article>
+    <article><b>🕵️ Missions</b><p>Chuỗi case tăng dần độ khó, có clue, objective, FLAG và XP.</p></article>
+    <article><b>🧰 Investigation Tools</b><p>search, whois, dns, ipinfo, metadata, logs, timeline và decode với dữ liệu giả lập.</p></article>
+    <article><b>🏆 XP & Rank</b><p>Tích lũy XP, lên rank và mở achievement khi hoàn thành case.</p></article>
+    <article><b>🌐 Bilingual UI</b><p>Giao diện Việt/English, phù hợp cho người mới và người muốn luyện thuật ngữ.</p></article>
+    <article><b>💾 Termux-native</b><p>Chạy trong terminal, lưu tiến trình cục bộ và không cần GUI hoặc root.</p></article>
+  </div>
+</section>
+
+<section id="academy" class="section split">
+  <div><p class="eyebrow">BLACKTRACE ACADEMY</p><h2>Từ newbie đến Investigator</h2><p>Không cần biết OSINT trước. Hãy học khái niệm, xem ví dụ, sau đó chuyển sang Mission và tự ghép bằng chứng.</p></div>
+  <div class="terminal"><div class="term-head">BLACKTRACE ACADEMY</div><pre>01  OSINT là gì? / What is OSINT?
+02  Username Investigation
+03  Domain & DNS
+04  IP Investigation
+05  Metadata
+06  Logs & Timeline
+
+&gt; Chọn bài học để bắt đầu...</pre></div>
+</section>
+
+<section id="missions" class="section">
+  <p class="eyebrow">MISSION SYSTEM</p><h2>Giải case, không đoán FLAG</h2>
+  <div class="case-row">
+    <div class="case"><small>ROOKIE · 100 XP</small><h3>The Ghost Account</h3><p>Lần theo username → domain → IP → server log.</p></div>
+    <div class="case"><small>ROOKIE · 125 XP</small><h3>Black Relay</h3><p>Ghép relay node từ chuỗi dữ liệu mô phỏng.</p></div>
+    <div class="case"><small>ANALYST · 150 XP</small><h3>Silent Archive</h3><p>Kết hợp metadata và timeline để tìm đáp án.</p></div>
+  </div>
+</section>
+
+<section id="install" class="section install">
+  <div><p class="eyebrow">GET STARTED</p><h2>Chạy BLACKTRACE trên Termux</h2><p>Clone repository, chạy installer rồi bắt đầu từ BLACKTRACE Academy.</p></div>
+  <div class="code"><code>git clone https://github.com/khahdihdz/blacktrace-termux.git
+cd blacktrace-termux
+chmod +x install.sh
+./install.sh
+blacktrace</code></div>
+</section>
+
+<section class="safety">
+  <b>⚠️ Môi trường an toàn</b>
+  <p>BLACKTRACE là game mô phỏng. Các IP, domain, username, log và kết quả công cụ được thiết kế để luyện tập; game không thực hiện quét hoặc truy vấn mục tiêu thực.</p>
+</section>
+</main>
+
+<footer><strong>BLACKTRACE</strong><span>© 2026 khahdihdz · MIT License</span><a href="https://github.com/khahdihdz/blacktrace-termux">Source code</a></footer>
+</body>
+</html>
