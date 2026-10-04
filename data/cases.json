@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "title": "The Ghost Account",
+    "difficulty": "Rookie",
+    "xp": 100,
+    "objective": "Tìm FLAG từ dấu vết của tài khoản night_owl77.",
+    "flag": "BLACKTRACE{ghost_account}",
+    "clues": [
+      {"id":"u","label":"Username","value":"night_owl77","tools":["search","username"]},
+      {"id":"d","label":"Domain","value":"nightfall-lab.test","tools":["whois","dns"]},
+      {"id":"i","label":"IP","value":"203.0.113.77","tools":["ipinfo"]},
+      {"id":"l","label":"Server log","value":"LOGIN /night_owl77 / 02:17 UTC","tools":["logs","timeline"]},
+      {"id":"m","label":"Metadata","value":"author=NOCTIS; project=ghost","tools":["metadata"]}
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Black Relay",
+    "difficulty": "Rookie",
+    "xp": 125,
+    "objective": "Xác định relay node trong chuỗi dữ liệu.",
+    "flag": "BLACKTRACE{black_relay}",
+    "clues": [
+      {"id":"u","label":"Username","value":"relay_zero","tools":["search","username"]},
+      {"id":"d","label":"Domain","value":"relay-black.test","tools":["whois","dns"]},
+      {"id":"i","label":"IP","value":"198.51.100.42","tools":["ipinfo"]},
+      {"id":"l","label":"Log fragment","value":"NODE=R-42 STATUS=ACTIVE","tools":["logs","timeline"]},
+      {"id":"m","label":"Encoded note","value":"QkxBQ0tUUkFDRQ==","tools":["decode"]}
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Silent Archive",
+    "difficulty": "Analyst",
+    "xp": 150,
+    "objective": "Tìm tên kho lưu trữ bí mật.",
+    "flag": "BLACKTRACE{silent_archive}",
+    "clues": [
+      {"id":"u","label":"Username","value":"archivist_9","tools":["search","username"]},
+      {"id":"d","label":"Domain","value":"silent-archive.test","tools":["whois","dns"]},
+      {"id":"i","label":"IP","value":"192.0.2.90","tools":["ipinfo"]},
+      {"id":"m","label":"File metadata","value":"filename=ledger.enc; creator=AR9","tools":["metadata"]},
+      {"id":"l","label":"Timeline","value":"03:10 upload → 03:12 rename → 03:14 logout","tools":["logs","timeline"]}
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Neon Witness",
+    "difficulty": "Analyst",
+    "xp": 175,
+    "objective": "Ghép các dấu vết của nhân chứng ảo.",
+    "flag": "BLACKTRACE{neon_witness}",
+    "clues": [
+      {"id":"u","label":"Username","value":"neon_witness","tools":["search","username"]},
+      {"id":"d","label":"Domain","value":"neon-witness.test","tools":["whois","dns"]},
+      {"id":"i","label":"IP","value":"203.0.113.19","tools":["ipinfo"]},
+      {"id":"l","label":"Log","value":"SESSION=NW19; EVENT=UPLOAD","tools":["logs","timeline"]},
+      {"id":"m","label":"Metadata","value":"device=terminal; tag=violet","tools":["metadata"]}
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Phantom DNS",
+    "difficulty": "Investigator",
+    "xp": 225,
+    "objective": "Xác định node giả trong DNS chain.",
+    "flag": "BLACKTRACE{phantom_dns}",
+    "clues": [
+      {"id":"d","label":"Domain","value":"phantom-dns.test","tools":["whois","dns"]},
+      {"id":"i","label":"IP","value":"198.51.100.88","tools":["ipinfo"]},
+      {"id":"l","label":"DNS log","value":"A phantom-dns.test -> 198.51.100.88","tools":["dns","logs"]},
+      {"id":"m","label":"Metadata","value":"resolver=PX-8; zone=phantom","tools":["metadata"]},
+      {"id":"u","label":"Username","value":"px_operator","tools":["search","username"]}
+    ]
+  }
+]
