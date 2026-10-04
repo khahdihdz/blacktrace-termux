@@ -24,6 +24,7 @@ def rank(xp):
         if xp >= need: r=name
     return r
 def tr(ui,k,lang): return ui[lang].get(k,ui["en"].get(k,k))
+def bi(ui,k): return f"{ui["vi"].get(k,k)} / {ui["en"].get(k,k)}"
 def ctext(ui,c,k,lang):
     if k in ("title","objective") and lang=="en":
         return ui["cases"].get(str(c["id"]),{}).get(k,c.get(k,""))
@@ -51,7 +52,7 @@ def show_case(c,seen,ui,lang):
 
 def tool(c,ui,lang):
     names=["search","whois","dns","ipinfo","metadata","logs","timeline","decode"]
-    print("\n🧰 "+tr(ui,"tools",lang))
+    print("\n🧰 "+bi(ui,"tools"))
     for i,n in enumerate(names,1): print(f"[{i}] {n}")
     q=input("> ").strip()
     if not q.isdigit() or not 1<=int(q)<=len(names):
@@ -92,7 +93,7 @@ def missions(cases,s,ui,lang):
         for c in cases:
             mark="✓" if c["id"] in s["solved"] else " "
             print(f"[{c['id']}] [{mark}] {ctext(ui,c,'title',lang)} — {c['difficulty']} — {c['xp']} XP")
-        print("[0] "+tr(ui,"back",lang)); q=input("> ").strip()
+        print("[0] "+bi(ui,"back")); q=input("> ").strip()
         if q=="0": return
         try: case_loop(next(c for c in cases if c["id"]==int(q)),s,ui,lang)
         except (ValueError,StopIteration): print(tr(ui,"invalid",lang)); pause(ui,lang)
@@ -100,7 +101,7 @@ def missions(cases,s,ui,lang):
 def academy(ui,lang):
     lessons=[("1","academy_1"),("2","academy_2"),("3","academy_3"),("4","academy_4"),("5","academy_5"),("6","academy_6")]
     while True:
-        clear(); banner(ui,lang); print("\n🎓 "+tr(ui,"academy",lang))
+        clear(); banner(ui,lang); print("\n🎓 "+bi(ui,"academy"))
         for n,k in lessons: print(f"[{n}] {tr(ui,k,lang)}")
         print("[0] "+tr(ui,"back",lang)); q=input("> ").strip()
         if q=="0": return
@@ -120,7 +121,7 @@ def main():
     while True:
         lang=s["lang"]; clear(); banner(ui,lang); profile(s,ui,lang)
         for n,k in [("1","missions"),("2","academy"),("3","investigation"),("4","tools"),("5","profile"),("6","achievements"),("7","language"),("8","save"),("0","exit")]:
-            print(f"[{n}] {tr(ui,k,lang)}")
+            print(f"[{n}] {bi(ui,k)}")
         q=input("\n> ").strip().lower()
         if q=="1": missions(cases,s,ui,lang)
         elif q=="2": academy(ui,lang)
