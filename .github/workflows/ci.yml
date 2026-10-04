@@ -1,0 +1,22 @@
+name: BLACKTRACE CI
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Validate game data
+        run: python -m json.tool data/cases.json > /dev/null
+      - name: Compile
+        run: python -m py_compile blacktrace.py
+      - name: Tests
+        run: |
+          python -m unittest discover -s tests -p 'test_*.py' -v
