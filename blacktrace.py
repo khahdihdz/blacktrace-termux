@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import json, os, random
+import json, os, random, shutil, textwrap
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
@@ -29,26 +29,60 @@ def ctext(ui,c,k,lang):
     if k in ("title","objective") and lang=="en":
         return ui["cases"].get(str(c["id"]),{}).get(k,c.get(k,""))
     return c.get(k,"")
+
+def terminal_width():
+    try: return max(40, shutil.get_terminal_size((80, 24)).columns)
+    except Exception: return 80
+
+def wrap_text(value, width=None):
+    width = width or max(36, terminal_width() - 4)
+    return textwrap.fill(str(value), width=width, break_long_words=False,
+                         break_on_hyphens=False, replace_whitespace=False)
+
+def print_wrapped(label, value=None):
+    width = max(36, terminal_width() - 4)
+    if value is None:
+        print(wrap_text(label, width))
+    else:
+        prefix = f"{label}: "
+        available = max(20, width - len(prefix))
+        lines = textwrap.wrap(str(value), width=available, break_long_words=False,
+                              break_on_hyphens=False, replace_whitespace=False)
+        if not lines:
+            print(prefix.rstrip())
+            return
+        print(prefix + lines[0])
+        indent = " " * len(prefix)
+        for line in lines[1:]:
+            print(indent + line)
+
 def clear(): os.system("clear" if os.name!="nt" else "cls")
+
 def banner(ui,lang):
-    print("\033[1;36m╔══════════════════════════════════════╗")
-    print("║          BLACKTRACE v1.1             ║")
-    print(f"║      {tr(ui,'banner',lang):^36}║")
-    print("╚══════════════════════════════════════╝\033[0m")
+    width = min(56, max(40, terminal_width()))
+    inner = width - 2
+    title = "BLACKTRACE v1.1"
+    subtitle = tr(ui,"banner",lang)
+    print("\033[1;36m╔" + "═" * inner + "╗")
+    print("║" + title.center(inner)[:inner] + "║")
+    print("║" + subtitle.center(inner)[:inner] + "║")
+    print("╚" + "═" * inner + "╝\033[0m")
+
 def pause(ui,lang): input("\n"+tr(ui,"press",lang))
 
 def profile(s,ui,lang):
     print(f"\n⭐ {tr(ui,'xp',lang)}: {s['xp']} | {tr(ui,'rank',lang)}: {rank(s['xp'])}")
     print(f"🕵️ {tr(ui,'cases_solved',lang)}: {len(s['solved'])}")
-    print(f"🏆 {tr(ui,'achievements',lang)}: {len(s['achievements']) if 'achievements' in ui else len(s['achievements'])}")
+    print(f"🏆 {tr(ui,'achievements',lang)}: {len(s['achievements'])}")
     print(f"🌐 {tr(ui,'language',lang)}: {'Tiếng Việt' if lang=='vi' else 'English'}")
 
 def show_case(c,seen,ui,lang):
     print(f"\n\033[1;33mCASE #{c['id']} — {ctext(ui,c,'title',lang)}\033[0m")
-    print(f"{tr(ui,'difficulty',lang)}: {c['difficulty']}")
-    print(f"{tr(ui,'objective',lang)}: {ctext(ui,c,'objective',lang)}\n")
+    print_wrapped(tr(ui,"difficulty",lang), c["difficulty"])
+    print_wrapped(tr(ui,"objective",lang), ctext(ui,c,"objective",lang))
+    print()
     for i,x in enumerate(c["clues"],1):
-        print(f"[{i}] {'✓' if x['id'] in seen else '?'} {x['label']}")
+        print_wrapped(f"[{i}] {'✓' if x['id'] in seen else '?'}", x["label"])
 
 def tool(c,ui,lang):
     names=["search","whois","dns","ipinfo","metadata","logs","timeline","decode"]
@@ -61,7 +95,8 @@ def tool(c,ui,lang):
     print(f"\n[{name}] {tr(ui,'analyzing',lang)}")
     hits=[x for x in c["clues"] if name in x.get("tools",[])]
     if hits:
-        for x in hits: print(f"→ {x['label']}: {x['value']}")
+        for x in hits:
+            print_wrapped("→ "+x["label"], x["value"])
     else: print("→ "+tr(ui,"noresult",lang))
 
 def case_loop(c,s,ui,lang):
@@ -74,7 +109,8 @@ def case_loop(c,s,ui,lang):
         if q=="a":
             hidden=[x for x in c["clues"] if x["id"] not in seen]
             if hidden:
-                x=random.choice(hidden); seen.add(x["id"]); print(f"\n🔎 {x['label']}\n{x['value']}")
+                x=random.choice(hidden); seen.add(x["id"])
+                print_wrapped("\n🔎 "+x["label"], x["value"])
             else: print("\n"+tr(ui,"all",lang))
             pause(ui,lang)
         elif q=="t": tool(c,ui,lang); pause(ui,lang)
@@ -92,7 +128,7 @@ def missions(cases,s,ui,lang):
         clear(); banner(ui,lang); print("\n📂 "+tr(ui,"missions",lang))
         for c in cases:
             mark="✓" if c["id"] in s["solved"] else " "
-            print(f"[{c['id']}] [{mark}] {ctext(ui,c,'title',lang)} — {c['difficulty']} — {c['xp']} XP")
+            print_wrapped(f"[{c['id']}] [{mark}]", f"{ctext(ui,c,'title',lang)} — {c['difficulty']} — {c['xp']} XP")
         print("[0] "+bi(ui,"back")); q=input("> ").strip()
         if q=="0": return
         try: case_loop(next(c for c in cases if c["id"]==int(q)),s,ui,lang)
@@ -102,12 +138,13 @@ def academy(ui,lang):
     lessons=[("1","academy_1"),("2","academy_2"),("3","academy_3"),("4","academy_4"),("5","academy_5"),("6","academy_6")]
     while True:
         clear(); banner(ui,lang); print("\n🎓 "+bi(ui,"academy"))
-        for n,k in lessons: print(f"[{n}] {tr(ui,k,lang)}")
+        for n,k in lessons: print_wrapped(f"[{n}]", tr(ui,k,lang))
         print("[0] "+tr(ui,"back",lang)); q=input("> ").strip()
         if q=="0": return
         k=dict(lessons).get(q)
         if k:
-            clear(); banner(ui,lang); print("\n📘 "+tr(ui,k,lang)); print(tr(ui,k+"_body",lang)); pause(ui,lang)
+            clear(); banner(ui,lang); print("\n📘 "+tr(ui,k,lang))
+            print_wrapped(tr(ui,k+"_body",lang)); pause(ui,lang)
         else: print(tr(ui,"invalid",lang)); pause(ui,lang)
 
 def language_menu(s,ui):
