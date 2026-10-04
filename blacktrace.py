@@ -24,7 +24,7 @@ def rank(xp):
         if xp >= need: r=name
     return r
 def tr(ui,k,lang): return ui[lang].get(k,ui["en"].get(k,k))
-def bi(ui,k): return f"{ui["vi"].get(k,k)} / {ui["en"].get(k,k)}"
+def bi(ui,k): return f"{ui['vi'].get(k,k)} / {ui['en'].get(k,k)}"
 def ctext(ui,c,k,lang):
     if k in ("title","objective") and lang=="en":
         return ui["cases"].get(str(c["id"]),{}).get(k,c.get(k,""))
