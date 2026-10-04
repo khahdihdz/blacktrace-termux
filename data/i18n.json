@@ -115,6 +115,66 @@
     "5": {
       "title": "Phantom DNS",
       "objective": "Identify the phantom node in the DNS chain."
+    },
+    "6": {
+      "title": "Midnight Courier",
+      "objective": "Follow the midnight data route and identify the courier node."
+    },
+    "7": {
+      "title": "Vanishing Profile",
+      "objective": "Identify the simulated identity behind a disappearing profile."
+    },
+    "8": {
+      "title": "Red Ledger",
+      "objective": "Correlate the records to find the code of the red ledger."
+    },
+    "9": {
+      "title": "The Last Check-in",
+      "objective": "Determine the final check-in point from the simulated timeline."
+    },
+    "10": {
+      "title": "Ciphered Postcard",
+      "objective": "Decode the traces hidden in the digital postcard."
+    },
+    "11": {
+      "title": "False Beacon",
+      "objective": "Distinguish the real beacon from the decoy beacon."
+    },
+    "12": {
+      "title": "Cold Storage",
+      "objective": "Find the cold storage vault from scattered traces."
+    },
+    "13": {
+      "title": "Seven Minute Gap",
+      "objective": "Investigate the seven-minute gap in the timeline."
+    },
+    "14": {
+      "title": "Mirror Identity",
+      "objective": "Determine which profile is the simulated copy."
+    },
+    "15": {
+      "title": "The Missing Packet",
+      "objective": "Find the missing packet in the simulated transfer chain."
+    },
+    "16": {
+      "title": "Blue Room",
+      "objective": "Identify the data room from metadata and DNS clues."
+    },
+    "17": {
+      "title": "Paper Trail",
+      "objective": "Follow the document chain to find the final file."
+    },
+    "18": {
+      "title": "Night Shift",
+      "objective": "Identify the node active during the night shift."
+    },
+    "19": {
+      "title": "Dead Drop Simulation",
+      "objective": "Find the simulated data drop point."
+    },
+    "20": {
+      "title": "Blacktrace Finale",
+      "objective": "Correlate every clue to find the final case FLAG."
     }
   }
 }
