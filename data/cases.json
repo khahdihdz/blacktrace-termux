@@ -7,11 +7,49 @@
     "objective": "Tìm FLAG từ dấu vết của tài khoản night_owl77.",
     "flag": "BLACKTRACE{ghost_account}",
     "clues": [
-      {"id":"u","label":"Username","value":"night_owl77","tools":["search","username"]},
-      {"id":"d","label":"Domain","value":"nightfall-lab.test","tools":["whois","dns"]},
-      {"id":"i","label":"IP","value":"203.0.113.77","tools":["ipinfo"]},
-      {"id":"l","label":"Server log","value":"LOGIN /night_owl77 / 02:17 UTC","tools":["logs","timeline"]},
-      {"id":"m","label":"Metadata","value":"author=NOCTIS; project=ghost","tools":["metadata"]}
+      {
+        "id": "u",
+        "label": "Username",
+        "value": "night_owl77",
+        "tools": [
+          "search",
+          "username"
+        ]
+      },
+      {
+        "id": "d",
+        "label": "Domain",
+        "value": "nightfall-lab.test",
+        "tools": [
+          "whois",
+          "dns"
+        ]
+      },
+      {
+        "id": "i",
+        "label": "IP",
+        "value": "203.0.113.77",
+        "tools": [
+          "ipinfo"
+        ]
+      },
+      {
+        "id": "l",
+        "label": "Server log",
+        "value": "LOGIN /night_owl77 / 02:17 UTC",
+        "tools": [
+          "logs",
+          "timeline"
+        ]
+      },
+      {
+        "id": "m",
+        "label": "Metadata",
+        "value": "author=NOCTIS; project=ghost",
+        "tools": [
+          "metadata"
+        ]
+      }
     ]
   },
   {
@@ -22,11 +60,49 @@
     "objective": "Xác định relay node trong chuỗi dữ liệu.",
     "flag": "BLACKTRACE{black_relay}",
     "clues": [
-      {"id":"u","label":"Username","value":"relay_zero","tools":["search","username"]},
-      {"id":"d","label":"Domain","value":"relay-black.test","tools":["whois","dns"]},
-      {"id":"i","label":"IP","value":"198.51.100.42","tools":["ipinfo"]},
-      {"id":"l","label":"Log fragment","value":"NODE=R-42 STATUS=ACTIVE","tools":["logs","timeline"]},
-      {"id":"m","label":"Encoded note","value":"QkxBQ0tUUkFDRQ==","tools":["decode"]}
+      {
+        "id": "u",
+        "label": "Username",
+        "value": "relay_zero",
+        "tools": [
+          "search",
+          "username"
+        ]
+      },
+      {
+        "id": "d",
+        "label": "Domain",
+        "value": "relay-black.test",
+        "tools": [
+          "whois",
+          "dns"
+        ]
+      },
+      {
+        "id": "i",
+        "label": "IP",
+        "value": "198.51.100.42",
+        "tools": [
+          "ipinfo"
+        ]
+      },
+      {
+        "id": "l",
+        "label": "Log fragment",
+        "value": "NODE=R-42 STATUS=ACTIVE",
+        "tools": [
+          "logs",
+          "timeline"
+        ]
+      },
+      {
+        "id": "m",
+        "label": "Encoded note",
+        "value": "QkxBQ0tUUkFDRQ==",
+        "tools": [
+          "decode"
+        ]
+      }
     ]
   },
   {
@@ -37,11 +113,49 @@
     "objective": "Tìm tên kho lưu trữ bí mật.",
     "flag": "BLACKTRACE{silent_archive}",
     "clues": [
-      {"id":"u","label":"Username","value":"archivist_9","tools":["search","username"]},
-      {"id":"d","label":"Domain","value":"silent-archive.test","tools":["whois","dns"]},
-      {"id":"i","label":"IP","value":"192.0.2.90","tools":["ipinfo"]},
-      {"id":"m","label":"File metadata","value":"filename=ledger.enc; creator=AR9","tools":["metadata"]},
-      {"id":"l","label":"Timeline","value":"03:10 upload → 03:12 rename → 03:14 logout","tools":["logs","timeline"]}
+      {
+        "id": "u",
+        "label": "Username",
+        "value": "archivist_9",
+        "tools": [
+          "search",
+          "username"
+        ]
+      },
+      {
+        "id": "d",
+        "label": "Domain",
+        "value": "silent-archive.test",
+        "tools": [
+          "whois",
+          "dns"
+        ]
+      },
+      {
+        "id": "i",
+        "label": "IP",
+        "value": "192.0.2.90",
+        "tools": [
+          "ipinfo"
+        ]
+      },
+      {
+        "id": "m",
+        "label": "File metadata",
+        "value": "filename=ledger.enc; creator=AR9",
+        "tools": [
+          "metadata"
+        ]
+      },
+      {
+        "id": "l",
+        "label": "Timeline",
+        "value": "03:10 upload → 03:12 rename → 03:14 logout",
+        "tools": [
+          "logs",
+          "timeline"
+        ]
+      }
     ]
   },
   {
@@ -52,11 +166,49 @@
     "objective": "Ghép các dấu vết của nhân chứng ảo.",
     "flag": "BLACKTRACE{neon_witness}",
     "clues": [
-      {"id":"u","label":"Username","value":"neon_witness","tools":["search","username"]},
-      {"id":"d","label":"Domain","value":"neon-witness.test","tools":["whois","dns"]},
-      {"id":"i","label":"IP","value":"203.0.113.19","tools":["ipinfo"]},
-      {"id":"l","label":"Log","value":"SESSION=NW19; EVENT=UPLOAD","tools":["logs","timeline"]},
-      {"id":"m","label":"Metadata","value":"device=terminal; tag=violet","tools":["metadata"]}
+      {
+        "id": "u",
+        "label": "Username",
+        "value": "neon_witness",
+        "tools": [
+          "search",
+          "username"
+        ]
+      },
+      {
+        "id": "d",
+        "label": "Domain",
+        "value": "neon-witness.test",
+        "tools": [
+          "whois",
+          "dns"
+        ]
+      },
+      {
+        "id": "i",
+        "label": "IP",
+        "value": "203.0.113.19",
+        "tools": [
+          "ipinfo"
+        ]
+      },
+      {
+        "id": "l",
+        "label": "Log",
+        "value": "SESSION=NW19; EVENT=UPLOAD",
+        "tools": [
+          "logs",
+          "timeline"
+        ]
+      },
+      {
+        "id": "m",
+        "label": "Metadata",
+        "value": "device=terminal; tag=violet",
+        "tools": [
+          "metadata"
+        ]
+      }
     ]
   },
   {
@@ -67,11 +219,850 @@
     "objective": "Xác định node giả trong DNS chain.",
     "flag": "BLACKTRACE{phantom_dns}",
     "clues": [
-      {"id":"d","label":"Domain","value":"phantom-dns.test","tools":["whois","dns"]},
-      {"id":"i","label":"IP","value":"198.51.100.88","tools":["ipinfo"]},
-      {"id":"l","label":"DNS log","value":"A phantom-dns.test -> 198.51.100.88","tools":["dns","logs"]},
-      {"id":"m","label":"Metadata","value":"resolver=PX-8; zone=phantom","tools":["metadata"]},
-      {"id":"u","label":"Username","value":"px_operator","tools":["search","username"]}
+      {
+        "id": "d",
+        "label": "Domain",
+        "value": "phantom-dns.test",
+        "tools": [
+          "whois",
+          "dns"
+        ]
+      },
+      {
+        "id": "i",
+        "label": "IP",
+        "value": "198.51.100.88",
+        "tools": [
+          "ipinfo"
+        ]
+      },
+      {
+        "id": "l",
+        "label": "DNS log",
+        "value": "A phantom-dns.test -> 198.51.100.88",
+        "tools": [
+          "dns",
+          "logs"
+        ]
+      },
+      {
+        "id": "m",
+        "label": "Metadata",
+        "value": "resolver=PX-8; zone=phantom",
+        "tools": [
+          "metadata"
+        ]
+      },
+      {
+        "id": "u",
+        "label": "Username",
+        "value": "px_operator",
+        "tools": [
+          "search",
+          "username"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Midnight Courier",
+    "difficulty": "Investigator",
+    "xp": 250,
+    "objective": "Lần theo tuyến chuyển dữ liệu lúc nửa đêm và xác định courier node.",
+    "flag": "BLACKTRACE{midnight_courier}",
+    "clues": [
+      {
+        "id": "u",
+        "label": "Username",
+        "value": "courier_13",
+        "tools": [
+          "search",
+          "username"
+        ]
+      },
+      {
+        "id": "d",
+        "label": "Domain",
+        "value": "midnight-courier.test",
+        "tools": [
+          "whois",
+          "dns"
+        ]
+      },
+      {
+        "id": "i",
+        "label": "IP",
+        "value": "203.0.113.13",
+        "tools": [
+          "ipinfo"
+        ]
+      },
+      {
+        "id": "l",
+        "label": "Transfer log",
+        "value": "01:13 SRC=MC13 -> NODE=K-7",
+        "tools": [
+          "logs",
+          "timeline"
+        ]
+      },
+      {
+        "id": "m",
+        "label": "Metadata",
+        "value": "route=K-7; priority=night",
+        "tools": [
+          "metadata"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Vanishing Profile",
+    "difficulty": "Investigator",
+    "xp": 275,
+    "objective": "Tìm danh tính mô phỏng đứng sau một profile biến mất.",
+    "flag": "BLACKTRACE{vanishing_profile}",
+    "clues": [
+      {
+        "id": "u",
+        "label": "Username",
+        "value": "echo_profile",
+        "tools": [
+          "search",
+          "username"
+        ]
+      },
+      {
+        "id": "d",
+        "label": "Domain",
+        "value": "echo-profile.test",
+        "tools": [
+          "whois",
+          "dns"
+        ]
+      },
+      {
+        "id": "i",
+        "label": "IP",
+        "value": "198.51.100.73",
+        "tools": [
+          "ipinfo"
+        ]
+      },
+      {
+        "id": "m",
+        "label": "Profile metadata",
+        "value": "alias=ECHO; tag=bluebird",
+        "tools": [
+          "metadata"
+        ]
+      },
+      {
+        "id": "l",
+        "label": "Activity log",
+        "value": "23:41 rename -> 23:44 private -> 23:47 deleted",
+        "tools": [
+          "logs",
+          "timeline"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Red Ledger",
+    "difficulty": "Elite",
+    "xp": 300,
+    "objective": "Ghép các bản ghi để tìm mã của cuốn sổ đỏ.",
+    "flag": "BLACKTRACE{red_ledger}",
+    "clues": [
+      {
+        "id": "d",
+        "label": "Domain",
+        "value": "red-ledger.test",
+        "tools": [
+          "whois",
+          "dns"
+        ]
+      },
+      {
+        "id": "i",
+        "label": "IP",
+        "value": "192.0.2.31",
+        "tools": [
+          "ipinfo"
+        ]
+      },
+      {
+        "id": "m",
+        "label": "File metadata",
+        "value": "file=ledger_r3.enc; tag=R3",
+        "tools": [
+          "metadata"
+        ]
+      },
+      {
+        "id": "l",
+        "label": "Audit log",
+        "value": "R3 opened 04:02; copied 04:05; sealed 04:06",
+        "tools": [
+          "logs",
+          "timeline"
+        ]
+      },
+      {
+        "id": "x",
+        "label": "Encoded fragment",
+        "value": "UkVE",
+        "tools": [
+          "decode"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "The Last Check-in",
+    "difficulty": "Elite",
+    "xp": 325,
+    "objective": "Xác định điểm check-in cuối cùng từ timeline giả lập.",
+    "flag": "BLACKTRACE{last_checkin}",
+    "clues": [
+      {
+        "id": "u",
+        "label": "Username",
+        "value": "last_checkin",
+        "tools": [
+          "search",
+          "username"
+        ]
+      },
+      {
+        "id": "i",
+        "label": "IP",
+        "value": "203.0.113.91",
+        "tools": [
+          "ipinfo"
+        ]
+      },
+      {
+        "id": "d",
+        "label": "Domain",
+        "value": "checkin-last.test",
+        "tools": [
+          "whois",
+          "dns"
+        ]
+      },
+      {
+        "id": "l",
+        "label": "Timeline",
+        "value": "18:20 login -> 18:24 upload -> 18:29 logout",
+        "tools": [
+          "logs",
+          "timeline"
+        ]
+      },
+      {
+        "id": "m",
+        "label": "Device metadata",
+        "value": "device=TC-91; zone=west",
+        "tools": [
+          "metadata"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Ciphered Postcard",
+    "difficulty": "Elite",
+    "xp": 350,
+    "objective": "Giải dấu vết mã hóa trong tấm bưu thiếp kỹ thuật số.",
+    "flag": "BLACKTRACE{ciphered_postcard}",
+    "clues": [
+      {
+        "id": "u",
+        "label": "Sender",
+        "value": "postcard_fox",
+        "tools": [
+          "search",
+          "username"
+        ]
+      },
+      {
+        "id": "d",
+        "label": "Domain",
+        "value": "cipher-postcard.test",
+        "tools": [
+          "whois",
+          "dns"
+        ]
+      },
+      {
+        "id": "x",
+        "label": "Encoded text",
+        "value": "Q0lQSEVS",
+        "tools": [
+          "decode"
+        ]
+      },
+      {
+        "id": "m",
+        "label": "Metadata",
+        "value": "format=png; note=FOX-8",
+        "tools": [
+          "metadata"
+        ]
+      },
+      {
+        "id": "l",
+        "label": "Delivery log",
+        "value": "FOX-8 queued 09:08 -> delivered 09:11",
+        "tools": [
+          "logs",
+          "timeline"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "title": "False Beacon",
+    "difficulty": "Elite",
+    "xp": 375,
+    "objective": "Phân biệt beacon thật và beacon giả trong mạng mô phỏng.",
+    "flag": "BLACKTRACE{false_beacon}",
+    "clues": [
+      {
+        "id": "d",
+        "label": "Domain",
+        "value": "false-beacon.test",
+        "tools": [
+          "whois",
+          "dns"
+        ]
+      },
+      {
+        "id": "i",
+        "label": "IP",
+        "value": "198.51.100.111",
+        "tools": [
+          "ipinfo"
+        ]
+      },
+      {
+        "id": "l",
+        "label": "Beacon log",
+        "value": "B-11 ping=3; B-12 ping=0; B-13 ping=1",
+        "tools": [
+          "logs",
+          "timeline"
+        ]
+      },
+      {
+        "id": "m",
+        "label": "Node metadata",
+        "value": "beacon=B-12; state=decoy",
+        "tools": [
+          "metadata"
+        ]
+      },
+      {
+        "id": "u",
+        "label": "Operator",
+        "value": "beacon_keeper",
+        "tools": [
+          "search",
+          "username"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Cold Storage",
+    "difficulty": "Blacktrace",
+    "xp": 400,
+    "objective": "Tìm kho lưu trữ lạnh từ các dấu vết rời rạc.",
+    "flag": "BLACKTRACE{cold_storage}",
+    "clues": [
+      {
+        "id": "u",
+        "label": "Username",
+        "value": "coldkeeper",
+        "tools": [
+          "search",
+          "username"
+        ]
+      },
+      {
+        "id": "d",
+        "label": "Domain",
+        "value": "cold-storage.test",
+        "tools": [
+          "whois",
+          "dns"
+        ]
+      },
+      {
+        "id": "i",
+        "label": "IP",
+        "value": "192.0.2.120",
+        "tools": [
+          "ipinfo"
+        ]
+      },
+      {
+        "id": "m",
+        "label": "Archive metadata",
+        "value": "vault=C-12; retention=90d",
+        "tools": [
+          "metadata"
+        ]
+      },
+      {
+        "id": "l",
+        "label": "Access log",
+        "value": "C-12 mounted 00:12 -> unmounted 00:19",
+        "tools": [
+          "logs",
+          "timeline"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "title": "Seven Minute Gap",
+    "difficulty": "Blacktrace",
+    "xp": 425,
+    "objective": "Điều tra khoảng trống bảy phút trong timeline.",
+    "flag": "BLACKTRACE{seven_minute_gap}",
+    "clues": [
+      {
+        "id": "u",
+        "label": "Account",
+        "value": "gap_runner",
+        "tools": [
+          "search",
+          "username"
+        ]
+      },
+      {
+        "id": "l",
+        "label": "Timeline",
+        "value": "14:00 login -> 14:07 missing -> 14:14 logout",
+        "tools": [
+          "logs",
+          "timeline"
+        ]
+      },
+      {
+        "id": "d",
+        "label": "Domain",
+        "value": "seven-gap.test",
+        "tools": [
+          "whois",
+          "dns"
+        ]
+      },
+      {
+        "id": "i",
+        "label": "IP",
+        "value": "203.0.113.107",
+        "tools": [
+          "ipinfo"
+        ]
+      },
+      {
+        "id": "m",
+        "label": "Session metadata",
+        "value": "session=G7; marker=14:07",
+        "tools": [
+          "metadata"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "title": "Mirror Identity",
+    "difficulty": "Blacktrace",
+    "xp": 450,
+    "objective": "Xác định profile nào là bản sao trong hai danh tính mô phỏng.",
+    "flag": "BLACKTRACE{mirror_identity}",
+    "clues": [
+      {
+        "id": "u",
+        "label": "Primary username",
+        "value": "mirror_one",
+        "tools": [
+          "search",
+          "username"
+        ]
+      },
+      {
+        "id": "d",
+        "label": "Domain",
+        "value": "mirror-identity.test",
+        "tools": [
+          "whois",
+          "dns"
+        ]
+      },
+      {
+        "id": "i",
+        "label": "Shared IP",
+        "value": "198.51.100.14",
+        "tools": [
+          "ipinfo"
+        ]
+      },
+      {
+        "id": "m",
+        "label": "Metadata",
+        "value": "profile=A14; fingerprint=MIRROR",
+        "tools": [
+          "metadata"
+        ]
+      },
+      {
+        "id": "l",
+        "label": "Activity log",
+        "value": "A14 copied profile B14 at 22:22",
+        "tools": [
+          "logs",
+          "timeline"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "title": "The Missing Packet",
+    "difficulty": "Blacktrace",
+    "xp": 475,
+    "objective": "Tìm packet bị thiếu trong chuỗi truyền dữ liệu mô phỏng.",
+    "flag": "BLACKTRACE{missing_packet}",
+    "clues": [
+      {
+        "id": "d",
+        "label": "Domain",
+        "value": "missing-packet.test",
+        "tools": [
+          "whois",
+          "dns"
+        ]
+      },
+      {
+        "id": "i",
+        "label": "IP",
+        "value": "192.0.2.150",
+        "tools": [
+          "ipinfo"
+        ]
+      },
+      {
+        "id": "l",
+        "label": "Packet log",
+        "value": "P-01 -> P-02 -> P-04 -> P-05",
+        "tools": [
+          "logs",
+          "timeline"
+        ]
+      },
+      {
+        "id": "m",
+        "label": "Capture metadata",
+        "value": "capture=MP5; expected=5 packets",
+        "tools": [
+          "metadata"
+        ]
+      },
+      {
+        "id": "x",
+        "label": "Encoded marker",
+        "value": "UDAz",
+        "tools": [
+          "decode"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "title": "Blue Room",
+    "difficulty": "Blacktrace",
+    "xp": 500,
+    "objective": "Xác định phòng dữ liệu từ chuỗi metadata và DNS.",
+    "flag": "BLACKTRACE{blue_room}",
+    "clues": [
+      {
+        "id": "u",
+        "label": "Alias",
+        "value": "blue_operator",
+        "tools": [
+          "search",
+          "username"
+        ]
+      },
+      {
+        "id": "d",
+        "label": "Domain",
+        "value": "blue-room.test",
+        "tools": [
+          "whois",
+          "dns"
+        ]
+      },
+      {
+        "id": "i",
+        "label": "IP",
+        "value": "203.0.113.160",
+        "tools": [
+          "ipinfo"
+        ]
+      },
+      {
+        "id": "m",
+        "label": "Room metadata",
+        "value": "room=B-16; color=blue; level=2",
+        "tools": [
+          "metadata"
+        ]
+      },
+      {
+        "id": "l",
+        "label": "Entry log",
+        "value": "B-16 opened 20:16; closed 20:23",
+        "tools": [
+          "logs",
+          "timeline"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "title": "Paper Trail",
+    "difficulty": "Blacktrace",
+    "xp": 525,
+    "objective": "Lần theo chuỗi tài liệu để tìm file cuối cùng.",
+    "flag": "BLACKTRACE{paper_trail}",
+    "clues": [
+      {
+        "id": "u",
+        "label": "Editor",
+        "value": "papertrail_7",
+        "tools": [
+          "search",
+          "username"
+        ]
+      },
+      {
+        "id": "d",
+        "label": "Domain",
+        "value": "paper-trail.test",
+        "tools": [
+          "whois",
+          "dns"
+        ]
+      },
+      {
+        "id": "m",
+        "label": "Document metadata",
+        "value": "draft1 -> draft2 -> final7",
+        "tools": [
+          "metadata"
+        ]
+      },
+      {
+        "id": "l",
+        "label": "Revision log",
+        "value": "draft1 08:01; draft2 08:09; final7 08:17",
+        "tools": [
+          "logs",
+          "timeline"
+        ]
+      },
+      {
+        "id": "x",
+        "label": "Encoded tag",
+        "value": "RklOQUw3",
+        "tools": [
+          "decode"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "title": "Night Shift",
+    "difficulty": "Blacktrace",
+    "xp": 550,
+    "objective": "Xác định node hoạt động trong ca đêm.",
+    "flag": "BLACKTRACE{night_shift}",
+    "clues": [
+      {
+        "id": "u",
+        "label": "Operator",
+        "value": "night_shift_8",
+        "tools": [
+          "search",
+          "username"
+        ]
+      },
+      {
+        "id": "d",
+        "label": "Domain",
+        "value": "night-shift.test",
+        "tools": [
+          "whois",
+          "dns"
+        ]
+      },
+      {
+        "id": "i",
+        "label": "IP",
+        "value": "198.51.100.180",
+        "tools": [
+          "ipinfo"
+        ]
+      },
+      {
+        "id": "l",
+        "label": "Shift log",
+        "value": "22:00 start -> 02:18 heartbeat -> 05:59 end",
+        "tools": [
+          "logs",
+          "timeline"
+        ]
+      },
+      {
+        "id": "m",
+        "label": "Node metadata",
+        "value": "node=NS-8; shift=night",
+        "tools": [
+          "metadata"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "title": "Dead Drop Simulation",
+    "difficulty": "Blacktrace",
+    "xp": 575,
+    "objective": "Tìm điểm nhận dữ liệu trong mô phỏng dead drop.",
+    "flag": "BLACKTRACE{dead_drop_simulation}",
+    "clues": [
+      {
+        "id": "u",
+        "label": "Courier",
+        "value": "drop_runner",
+        "tools": [
+          "search",
+          "username"
+        ]
+      },
+      {
+        "id": "d",
+        "label": "Domain",
+        "value": "dead-drop.test",
+        "tools": [
+          "whois",
+          "dns"
+        ]
+      },
+      {
+        "id": "i",
+        "label": "IP",
+        "value": "192.0.2.190",
+        "tools": [
+          "ipinfo"
+        ]
+      },
+      {
+        "id": "m",
+        "label": "Drop metadata",
+        "value": "drop=D-19; status=sealed",
+        "tools": [
+          "metadata"
+        ]
+      },
+      {
+        "id": "l",
+        "label": "Courier log",
+        "value": "D-19 checked 11:19; sealed 11:21",
+        "tools": [
+          "logs",
+          "timeline"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "title": "Blacktrace Finale",
+    "difficulty": "Blacktrace",
+    "xp": 750,
+    "objective": "Ghép toàn bộ dấu vết để tìm FLAG của vụ án cuối.",
+    "flag": "BLACKTRACE{blacktrace_finale}",
+    "clues": [
+      {
+        "id": "u",
+        "label": "Master alias",
+        "value": "trace_master",
+        "tools": [
+          "search",
+          "username"
+        ]
+      },
+      {
+        "id": "d",
+        "label": "Domain",
+        "value": "finale-blacktrace.test",
+        "tools": [
+          "whois",
+          "dns"
+        ]
+      },
+      {
+        "id": "i",
+        "label": "Core IP",
+        "value": "203.0.113.200",
+        "tools": [
+          "ipinfo"
+        ]
+      },
+      {
+        "id": "m",
+        "label": "Master metadata",
+        "value": "project=BLACKTRACE; stage=finale",
+        "tools": [
+          "metadata"
+        ]
+      },
+      {
+        "id": "l",
+        "label": "Final timeline",
+        "value": "09:20 gather -> 09:30 correlate -> 09:40 verify -> 09:50 close",
+        "tools": [
+          "logs",
+          "timeline"
+        ]
+      },
+      {
+        "id": "x",
+        "label": "Encoded seal",
+        "value": "RklOQUxF",
+        "tools": [
+          "decode"
+        ]
+      }
     ]
   }
 ]
